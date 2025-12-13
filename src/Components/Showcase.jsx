@@ -12,7 +12,6 @@ const Showcase = () => {
           trigger: "#showcase",
           start: "top top",
           end: "bottom top",
-          //   end: "+=800px",
           scrub: true,
           pin: true,
         },
@@ -27,7 +26,7 @@ const Showcase = () => {
   }, [isTablet]);
 
   return (
-    <section id="showcase">
+    <section id="showcase" className="h-[140vh]">
       <div className="media">
         <video src="/videos/game.mp4" loop muted autoPlay playsInline />
         <div className="mask">

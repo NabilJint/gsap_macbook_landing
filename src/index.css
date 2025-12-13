@@ -181,10 +181,10 @@ body {
   }
 
   #showcase {
-    @apply relative!;
+    @apply relative;
 
     .media {
-      @apply relative! lg:overflow-hidden;
+      @apply relative lg:overflow-hidden;
 
       video {
         @apply w-full object-cover object-center;

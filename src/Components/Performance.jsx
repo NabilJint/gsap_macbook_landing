@@ -68,7 +68,7 @@ const Performance = () => {
   );
 
   return (
-    <section id="performance" ref={sectionRef}>
+    <section id="performance" className="mt-50!" ref={sectionRef}>
       <h2>Next-level graphics performance. Game on.</h2>
 
       <div className="wrapper">
