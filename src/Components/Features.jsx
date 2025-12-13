@@ -30,7 +30,7 @@ const ModelScroll = () => {
 
       v.load();
     });
-  }, []);
+  }, [setTexture]);
 
   // 3D model scolling
   useGSAP(() => {
@@ -90,7 +90,7 @@ const ModelScroll = () => {
       <Suspense
         fallback={
           <Html>
-            <h1 className="text-white ext-3xl uppercase">Loading...</h1>
+            <h1 className="text-white text-3xl uppercase">Loading...</h1>
           </Html>
         }
       >
@@ -111,16 +111,16 @@ const Features = () => {
         <ModelScroll />
       </Canvas>
       <div className="absolute inset-0">
-        {features.map((feature, index) => (
-          <div className={clsx("box", `box${index + 1}`, feature.styles)}>
-            <img src={feature.icon} alt={feature.highlight} />
-            <p>
-              <span className="text-white">{feature.highlight}</span>
-              {"  "}
-              {feature.text}
-            </p>
-          </div>
-        ))}
+{features.map((feature, index) => (
+  <div key={feature.highlight || index} className={clsx("box", `box${index + 1}`, feature.styles)}>
+    <img src={feature.icon} alt={feature.highlight} />
+    <p>
+      <span className="text-white">{feature.highlight}</span>
+      {"  "}
+      {feature.text}
+    </p>
+  </div>
+))}
       </div>
     </section>
   );
